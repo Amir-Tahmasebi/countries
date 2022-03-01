@@ -1,0 +1,16 @@
+.custom-layout-container {
+    min-height: 100vh;
+    .custom-layout-wrapper {
+        width: 100%;
+        max-width: 1440px;
+        margin: 0 auto;
+    }
+}
+@media only screen and (max-width: 600px) {
+    .custom-layout-container{
+    .custom-layout-wrapper {
+    width: 90%;
+    margin: 0 auto;
+    }
+    }
+}

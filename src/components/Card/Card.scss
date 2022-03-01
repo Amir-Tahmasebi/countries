@@ -1,0 +1,91 @@
+@import "./../../assets/style/mixin";
+@import "./../../assets/style/variable";
+
+.custom-card {
+    flex-basis: 25%;
+    margin: 20px 0;
+    background-color: transparent;
+
+    .custom-card-container {
+        padding: 0 12px;
+
+        .custom-card-wrapper {
+            @include flex-position(flex-start, flex-start, column);
+            overflow: hidden;
+            border-radius: 6px;
+
+            img {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                height: 200px;
+                width: 100% !important;
+            }
+
+            .custom-card-content {
+                padding: 12px 12px 18px 12px;
+
+                h3 {
+                    font-weight: 800;
+                    font-size: 16px;
+                    margin: 6px 0 8px 0;
+                }
+
+                p {
+                    font-weight: 600;
+                    font-size: 14px;
+                    margin-bottom: 6px;
+
+                    span {
+                        font-weight: 300;
+                        font-size: 14px;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.bg-dark {
+    .custom-card-content {
+        h3 {
+            color: $very_light_gray;
+        }
+
+        p {
+            color: $very_light_gray;
+
+            span {
+                color: rgb(199, 199, 199);
+            }
+        }
+    }
+}
+
+.bg-white {
+    .custom-card-content {
+        h3 {
+            color: $very_dark_blue_text;
+        }
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .custom-card {
+        flex-basis: 100%;
+        width: 100%;
+
+        .custom-card-container {
+            width: 100%;
+
+            .custom-card-wrapper {
+                width: 100%;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,9 @@
+@import "./../../assets/style/mixin";
+@import "./../../assets/style/variable";
+
+.loading-container {
+    @include flex-position;
+    height: 100%;
+    width: 100%;
+    min-height: 60vh;
+}

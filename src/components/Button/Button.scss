@@ -1,0 +1,40 @@
+@import "./../../assets/style/mixin";
+@import "./../../assets/style/variable";
+
+.custom-button {
+    @include flex-position;
+    border: none;
+    outline: none;
+    background: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+    .custom-btn-icon {
+        margin-right: 12px;
+    }
+}
+
+.custom-button-large {
+    font-size: 16px;
+    font-weight: 600;
+    padding: 10px 30px;
+}
+
+.custom-button-small {
+    font-size: 14px;
+    font-weight: 600;
+    padding: 6px 18px;
+}
+
+.bg-dark {
+    color: $white;
+    box-shadow: 0px 0px 9px 0px rgba(100, 100, 100, 0.88);
+
+    .custom-btn-icon {
+        color: $white;
+    }
+}
+
+.bg-white {
+    box-shadow: 0px 0px 9px 0px rgba(87, 87, 87, 0.88);
+}

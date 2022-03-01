@@ -1,0 +1,92 @@
+@import "./../../assets/style/mixin";
+@import "./../../assets/style/variable";
+
+.custom-home-content {
+
+    .custom-filter-wrapper {
+        @include flex-position(space-between);
+
+        .custom-input-wrapper {
+            position: relative;
+            width: 100%;
+
+            .custom-input-icon {
+                position: absolute;
+                top: 50%;
+                left: 5%;
+                transform: translate(-5%, -50%);
+
+            }
+
+            input {
+                width: 45%;
+                border-radius: 4px;
+                padding: 18px 12px 18px 6%;
+                font-size: 14px;
+                border: none;
+                margin-left: 12px;
+
+                ::placeholder {
+                    font-size: 14px;
+                }
+
+                &:focus-visible {
+                    outline: none
+                }
+            }
+
+        }
+    }
+
+    .card-container {
+        @include flex-position(space-between, flex-start);
+        flex-wrap: wrap;
+    }
+}
+
+.bg-dark {
+    .custom-input-label {
+        color: $white !important;
+    }
+
+    &::placeholder {
+        color: $white !important;
+    }
+
+    // select icon
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeMedium.MuiSelect-icon.MuiSelect-iconOutlined.css-hfutr2-MuiSvgIcon-root-MuiSelect-icon {
+        color: $white;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .custom-home-content {
+        .custom-filter-wrapper {
+            @include flex-position(flex-start, flex-start, column);
+
+            .custom-input-wrapper {
+                width: 100%;
+                margin-bottom: 24px;
+                .custom-input-icon {
+                    left: 10%;
+                    transform: translate(-10%, -50%);
+
+                }
+
+                input {
+                    width: 70%;
+                    margin-left: 8px;
+                    padding: 18px 12px 18px 16%;
+
+                }
+            }
+        }
+
+        .card-container {
+            @include flex-position(flex-start, flex-start, column);
+            flex-wrap: nowrap;
+            width: 95%;
+            margin: 0 auto;
+        }
+    }
+}

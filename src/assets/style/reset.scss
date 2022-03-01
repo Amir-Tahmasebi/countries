@@ -1,0 +1,59 @@
+@import "./fonts";
+@import "./variable";
+
+body,
+* {
+    font-family: NunitoSans;
+    margin: 0;
+    padding: 0;
+    transition: all .25s ease;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul,
+li {
+    list-style: none;
+}
+
+.my-50 {
+    margin: 50px 0;
+}
+
+.mx-6 {
+    margin: 0 6px;
+}
+
+.mx-4 {
+    margin: 0 4px;
+}
+
+.m-6 {
+    margin: 6px;
+}
+
+.bg-very-light-gray {
+    background-color: $very_light_gray;
+    color: black !important;
+}
+
+.bg-white {
+    background-color: $white !important;
+    color: black !important;
+    box-shadow: 0px 6px 13px 1px rgba(212, 212, 212, 0.49);
+
+}
+
+.bg-dark {
+    background-color: $dark_blue !important;
+    color: white !important;
+
+}
+
+.bg-very-dark {
+    color: white !important;
+    background-color: $very_dark_blue_bg !important;
+}
